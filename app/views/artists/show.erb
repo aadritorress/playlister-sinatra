@@ -1,0 +1,14 @@
+<h1> Artist Show page</h1>
+
+<hr>
+<h2><%=@artist.name%> <%=@artist.age%></h2>
+
+<h2>Songs</h2>
+<% @songs.each do |song| %>
+    <%= song.name %>
+<%end%>
+
+<h2>Genres</h2>
+    <% @genres.each do |genre| %>
+        <%= genre.name %>
+<%end%>

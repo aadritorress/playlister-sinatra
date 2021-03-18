@@ -1,0 +1,28 @@
+<h1> Create a new Song </h1>
+<hr>
+<form action='/songs' method='post'> 
+<label> Song Name: </label>
+<input type='text' name="name">
+<br>
+<label> Release Year: </label>
+<input type='number' name="release_year">
+<br>
+<label> Artist: </label>
+
+<select name="artist_id">
+<% @artists.each do  | artist | %>
+    <option value=<%=artist.id%> > <%= artist.name%> </option>
+<% end %>
+</select>
+
+<br>
+
+<label> Genre </label>
+
+<select name="genre_id">
+<% @genres.each do  | genre | %>
+    <option value=<%= genre.id%> >  <%= genre.name%>    </option>
+<% end %>
+</select>
+
+</form>
